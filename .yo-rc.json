@@ -1,0 +1,74 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "laafiapp",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "LaafiAppJhipster",
+    "packageName": "laafiapp",
+    "packageFolder": "laafiapp",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YTljZGIzMWQ5ZjBhMDNlOGNjZmQ2Njc5MDE2YjI0OTIwNGRmMzQ4MmQ4ZWE1MTFhMjYxYWU5MWRhZTliNTU0OGIxNTk1YzY0NDI1YmRkZWFiZmU3OWNlMDQ4NzdkZDk3NjhmNmVjYWZmODY0OGE0NjIyNmE3NjJmY2VhNTU1Mjc=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-nav-element",
+        "version": "2.1.13"
+      },
+      {
+        "name": "generator-jhipster-vuejs2",
+        "version": "1.1.1"
+      },
+      {
+        "name": "generator-jhipster-primeng",
+        "version": "3.0.0"
+      },
+      {
+        "name": "generator-jhipster-swagger-cli",
+        "version": "3.0.1"
+      },
+      {
+        "name": "generator-jhipster-primeng-charts",
+        "version": "1.2.0"
+      },
+      {
+        "name": "generator-jhipster-audit-helper",
+        "version": "1.0.3"
+      },
+      {
+        "name": "generator-codegen",
+        "version": "0.3.1"
+      },
+      {
+        "name": "generator-jhipster-angular-material-integration",
+        "version": "1.0.17"
+      },
+      {
+        "name": "generator-jhipster-uaa-security-authority",
+        "version": "1.0.1"
+      }
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": ["fr", "en"]
+  }
+}
