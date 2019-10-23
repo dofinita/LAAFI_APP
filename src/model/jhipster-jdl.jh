@@ -1,0 +1,106 @@
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
+enum HygienneDeVie {
+   TABAC, 
+   ALCOOL, 
+   CAFE, COLA, DROGUE_DOUCE,
+   DROGUE_FORTE
+}
+enum AntecedentPersonnel{
+HEPHATITE, BILHAZRIOSE
+}
+// an ignored comment
+/** not an ignored comment */
+entity PacientIdentite {
+	nom String required maxlength(25),
+	prenon1 String required maxlength(25),
+	prenon2 String required maxlength(25),
+	dateDeNaissance ZonedDateTime required,
+    lieuDeNaissance String required,
+    age Integer required,
+    hygienneDeVie HygienneDeVie ,
+     dateCreation LocalDate,
+    antecedentPersonnel AntecedentPersonnel
+}
+
+entity NouveauDossier{
+   hdm String,
+   examenGenerale Long,
+   examenDesSystemesAppareils Long,
+   resultatDesBilansRealise Long,
+   hypotheseDianostiqueHD String,
+   bilanRealiser String,
+   traitement String
+}
+enum Etat{
+ BON, 
+ MAUVAIS,
+ MOYEN
+ 
+}
+
+
+
+entity ExamenGenerale{
+    etatGenerale Etat
+
+}
+
+entity DossierPacient {
+    IdentitePacient String,
+    ListeConsultation String,
+    antecedantPersonnels Long,
+    anteedantFamiliaux Long,
+    antecedantobstetricaux Long,
+    antecedantChirugicaux Long
+}
+
+entity  AntecedantChirugicaux{
+    chirurgie1 String,
+    chirurgie2 String,
+    natutreTraumatisme1 String,
+    natutreTraumatisme2 String
+    
+}
+entity NouvelleConsultation{
+    examenGenerale String
+
+
+}
+
+entity AntecedantPersonnels{
+   hepatite Boolean,
+   bilharziose Boolean
+}
+
+ entity Antecedantobstetricaux{
+   nombreDeClient Integer,
+   nombreDeParite Integer,
+   nombreDavortement Integer,
+   nombreEnfantDecede Integer
+ 
+ }
+
+
+entity AntecedantFamiliaux{
+   pereOuMereDecede Boolean,
+   causeDecesPere String,
+   causeDecesMere String
+}
+relationship OneToMany {
+	PacientIdentite to DossierPacient{identitePacient}
+    User to Country,
+    User to Region,
+    NouvelleConsultation {examenGenerale} to ExamenGenerale
+}
+relationship ManyToMany {
+	DossierPacient{antecedantFamiliaux} to AntecedantFamiliaux,
+    DossierPacient{antecedantChirugicaux} to AntecedantChirugicaux,
+    DossierPacient{antecedantPersonnels} to AntecedantPersonnels,
+    DossierPacient{antecedantobstetricaux} to Antecedantobstetricaux
+ }
