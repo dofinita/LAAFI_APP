@@ -79,7 +79,7 @@ entity DossierPacient {
     IdentitePacient String,
     ListeConsultation String,
     antecedantPersonnels Long,
-    anteedantFamiliaux Long,
+    antecedantFamiliaux Long,
     antecedantobstetricaux Long,
     antecedantChirugicaux Long
 }
