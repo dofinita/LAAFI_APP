@@ -7,10 +7,10 @@ cache:
 stages:
     - build
     - test
-    - analyze
-    - package
-    - release
-    - deploy
+#    - analyze
+#    - package
+#    - release
+ #   - deploy
 
 
 before_script:
